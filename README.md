@@ -28,8 +28,6 @@ When a student struggles academically in their first semester (e.g., zero approv
 #### Gradio Web Interface Output:
 ![Dropout Prediction UI](images/gradio_dropout_prediction.png)
 
-#### Detailed Decision & Risk Assessment Card:
-![Dropout Feature Card](images/student_dropout_prediction_output.png)
 
 - **Key Inputs**:
   - `Age at enrollment`: 25
@@ -49,8 +47,6 @@ When a student demonstrates moderate progress (e.g., passing 5 out of 6 enrolled
 #### Gradio Web Interface Output:
 ![Enrolled Prediction UI](images/gradio_enrolled_prediction.png)
 
-#### Detailed Decision & Risk Assessment Card:
-![Enrolled Feature Card](images/student_enrolled_prediction_output.png)
 
 - **Key Inputs**:
   - `Age at enrollment`: 18
@@ -70,8 +66,7 @@ When a student completes all first-semester enrolled courses with distinction (h
 #### Gradio Web Interface Output:
 ![Graduate Prediction UI](images/gradio_graduate_prediction.png)
 
-#### Detailed Decision & Risk Assessment Card:
-![Graduate Feature Card](images/student_graduate_prediction_output.png)
+
 
 - **Key Inputs**:
   - `Age at enrollment`: 18
@@ -83,54 +78,4 @@ When a student completes all first-semester enrolled courses with distinction (h
 - **Prediction**: **Graduate (91.57% confidence)**
 - **Recommended Action**: Candidate is on a steady trajectory toward graduation.
 
----
 
-## 📈 Multi-Scenario Comparative Dashboard
-
-A comparative side-by-side view illustrating how variations in user inputs directly shift the model's confidence distribution across all three classes:
-
-![Outcomes Comparison Dashboard](images/student_outcomes_comparison_dashboard.png)
-
----
-
-## 🚀 How to Run Locally
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/BhanuPrasad-270106/ML-Mini-project.git
-cd ML-Mini-project
-```
-
-### 2. Install Dependencies
-```bash
-pip install -r requirements.txt
-# Or individually:
-pip install pandas numpy scikit-learn imbalanced-learn xgboost gradio joblib matplotlib
-```
-
-### 3. Launch the Gradio Web Application
-```bash
-python app.py
-```
-Open your browser and navigate to `http://127.0.0.1:7860` to adjust input sliders and test predictions in real-time.
-
----
-
-## 📁 Repository Structure
-```text
-ML-Mini-project/
-├── Data/
-│   └── data.csv                                            # UCI Higher Education Student dataset
-├── images/
-│   ├── gradio_dropout_prediction.png                       # UI output for Dropout
-│   ├── gradio_enrolled_prediction.png                      # UI output for Enrolled
-│   ├── gradio_graduate_prediction.png                      # UI output for Graduate
-│   ├── student_dropout_prediction_output.png               # High-res analytics card (Dropout)
-│   ├── student_enrolled_prediction_output.png              # High-res analytics card (Enrolled)
-│   ├── student_graduate_prediction_output.png              # High-res analytics card (Graduate)
-│   └── student_outcomes_comparison_dashboard.png           # 3-way comparative dashboard
-├── app.py                                                  # Interactive Gradio application
-├── student_dropout_model_bundle.joblib                     # Saved XGBoost pipeline bundle
-├── Student_Dropout_Risk_Prediction_Revised (1).ipynb       # Full experimentation notebook
-└── ExplainableStudentDropoutRiskPredictionProjectReport (1).pdf # Project report
-```
